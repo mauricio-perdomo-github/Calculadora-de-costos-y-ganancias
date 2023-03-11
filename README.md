@@ -1,1 +1,2 @@
 # Calculadora-de-costos-y-ganancias
+Esta calculadora permite conocer la ganancia de una venta informal, sin tomar en cuenta impuestos. Está pensada para microemprendedores, comerciantes informales y artistas que deseen conocer el porcentaje de ganancia que obtienen de sus productos o servicios ofrecidos y evaluar si es un negocio rentable. Puedes probarlo con los costos de tus prodcutos en el siguiente enlace: https://mauricio-perdomo-github.github.io/Calculadora-de-costos-y-ganancias/
