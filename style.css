@@ -1,0 +1,86 @@
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 1em 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    margin: 1em 0;
+}
+
+p {
+    font-size: 1em;
+    margin: 1em 0;
+    text-align: center;
+    margin: 0 1em 0 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.2em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    margin-bottom: 1em;
+    width: 33%;
+    align-content: center;
+    text-align: center;
+}
+
+button[type="button"] {
+    background-color: #77e1fc;
+    color: #000000;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+    background-color: #007bff;
+}
+
+#costos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0;
+}
+
+.costo {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin: 1em;
+}
+
+#resultado {
+    font-size: 1.5em;
+    margin: 1em 0;
+    text-align: center;
+    margin: 1em;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de Ganancias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Calculadora de Ganancias</h1>
+    <p>Esta calculadora permite conocer la ganancia de una venta informal, sin tomar en cuenta impuestos. <br><br>
+    Está pensada para microemprendedores, comerciantes informales y artistas que deseen conocer el porcentaje de ganancia que obtienen de sus productos o servicios ofrecidos y evaluar si es un negocio rentable. Se puede ingresar el monto total de costos de una sola vez o puedes ingresar cada costo uno por uno utilizando el botón "agregar costo".</p><br>
+    <p>Completa el siguiente formulario ingresando los datos de tu producto o servicio:</p><br>
+	<form>
+		<label for="inversion">Nombre del producto o servicio:</label>
+		<input type="text" id="inversion" name="inversion"><br>
+		<label for="costo">Costo de la Inversión:</label>
+		<input type="text" id="costo" name="costo"><br>
+		<button type="button" onclick="agregarCosto()">Agregar costo</button>
+		<br>
+		<label for="venta">Precio de Venta:</label>
+		<input type="text" id="venta" name="venta"><br>
+		<button type="button" onclick="calcularGanancia()">Calcular Ganancia</button>
+	</form>
+	<h2>Lista de Costos:</h2>
+	<div id="costos"></div>
+	<h2>Resultado:</h2>
+	<p id="resultado"></p>
+	<script>
+		var costos = [];
+
+		function agregarCosto() {
+			// Obtener el valor del campo del costo
+			var costo = parseFloat(document.getElementById("costo").value);
+
+			// Agregar el costo a la lista de costos
+			var costoLista = document.createElement("div");
+			costoLista.innerHTML = "$" + costo.toFixed(2);
+			costoLista.classList.add("costo");
+			document.getElementById("costos").appendChild(costoLista);
+
+			// Agregar el costo a la lista de costos totales
+			costos.push(costo);
+
+			// Limpiar el valor del campo del costo
+			document.getElementById("costo").value = "";
+		}
+
+		function calcularGanancia() {
+    // Obtener el valor del campo de venta
+    var venta = parseFloat(document.getElementById("venta").value);
+
+    // Calcular el costo total de la inversión
+    var costoTotal = 0;
+    for (var i = 0; i < costos.length; i++) {
+        costoTotal += costos[i];
+    }
+
+    // Calcular la ganancia
+    var ganancia = venta - costoTotal;
+
+    // Calcular el porcentaje de ganancia
+    var porcentajeGanancia = (ganancia / venta) * 100;
+
+    // Mostrar el resultado
+    document.getElementById("resultado").innerHTML = "La ganancia del producto o servicio \"" + document.getElementById("inversion").value + "\" es de $" + ganancia.toFixed(2) + " (" + porcentajeGanancia.toFixed(2) + "% de ganancia sobre el precio de venta).";
+}
+            </script>
+            </body>
+            </html>
